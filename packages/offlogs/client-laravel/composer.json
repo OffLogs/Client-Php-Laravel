@@ -1,0 +1,43 @@
+{
+    "name": "offlogs/client-laravel",
+    "description": "OffLogs client for the Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Heorhii Shira",
+            "email": "lampego@offlogs.com",
+            "homepage": "https://georgyshira.info"
+        }
+    ],
+    "homepage": "https://gitlab.com/offlogs/client-php-laravel",
+    "keywords": ["Laravel", "Client", "Laravel"],
+    "require": {
+        "php": "^8.0.2",
+        "illuminate/support": "~9",
+        "offlogs/client": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Offlogs\\ClientLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Offlogs\\ClientLaravel\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Offlogs\\ClientLaravel\\OffLogsServiceProvider"
+            ],
+            "aliases": {
+                "ClientLaravel": "Offlogs\\ClientLaravel\\Facades\\ClientLaravel"
+            }
+        }
+    }
+}
